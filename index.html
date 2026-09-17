@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NovaChat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-brand">
+    <span class="nav-dot"></span>
+    NovaChat
+  </div>
+  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+</header>
+
+<main class="hero">
+  <div class="hero-copy">
+    <p class="hero-eyebrow">Python · Flask · JavaScript</p>
+    <h1>A chatbot that's<br>actually simple.</h1>
+    <p class="hero-sub">
+      NovaChat is a small AI chat app built for learning: type a message,
+      get a reply, watch it think for a second first. No fuss, no clutter.
+    </p>
+    <a href="/chat" class="btn-primary">Start chatting →</a>
+  </div>
+
+  <div class="hero-preview" aria-hidden="true">
+    <div class="preview-window">
+      <div class="preview-bar">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="preview-body">
+        <div class="bubble bubble-bot">Hey! What can I help with?</div>
+        <div class="bubble bubble-user">Explain how you work</div>
+        <div class="bubble bubble-bot">
+          <span class="typing-dot"></span>
+          <span class="typing-dot"></span>
+          <span class="typing-dot"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<section class="features">
+  <div class="feature">
+    <h3>Instant replies</h3>
+    <p>Messages are handled by a lightweight Python backend and answered in real time.</p>
+  </div>
+  <div class="feature">
+    <h3>Works everywhere</h3>
+    <p>The layout adapts from a wide desktop screen down to a single-hand phone view.</p>
+  </div>
+  <div class="feature">
+    <h3>Remembers the chat</h3>
+    <p>Your conversation stays in view as you scroll, so context never gets lost.</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  Built with Flask + vanilla JS · a student project
+</footer>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
